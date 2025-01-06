@@ -1,0 +1,232 @@
+[
+  {
+    "email": "john.doe@example.com",
+    "fname": "John",
+    "lname": "Doe",
+    "department": "IT",
+    "rollNumber": 101,
+    "subject": "Java",
+    "classesAttended": 5,
+    "attendance": 85.5
+  },
+  {
+    "email": "vivaan.verma@example.com",
+    "fname": "Vivaan",
+    "lname": "Verma",
+    "department": "Marketing",
+    "rollNumber": 102,
+    "subject": "Python",
+    "classesAttended": 2,
+    "attendance": 80.1
+  },
+  {
+    "email": "ishaan.mehta@companydomain.com",
+    "fname": "Ishaan",
+    "lname": "Mehta",
+    "department": "Finance",
+    "rollNumber": 103,
+    "subject": "AI & ML",
+    "classesAttended": 6,
+    "attendance": 80.3
+  },
+  {
+    "email": "kabir.patel@example.com",
+    "fname": "Kabir",
+    "lname": "Patel",
+    "department": "Operations",
+    "rollNumber": 104,
+    "subject": "Data Science",
+    "classesAttended": 8,
+    "attendance": 80.4
+  },
+  {
+    "email": "anaya.chopra@example.com",
+    "fname": "Anaya",
+    "lname": "Chopra",
+    "department": "Sales",
+    "rollNumber": 105,
+    "subject": "Java",
+    "classesAttended": 10,
+    "attendance": 80.5
+  },
+  {
+    "email": "aadhya.kapoor@example.com",
+    "fname": "Aadhya",
+    "lname": "Kapoor",
+    "department": "Support",
+    "rollNumber": 106,
+    "subject": "Python",
+    "classesAttended": 12,
+    "attendance": 80.6
+  },
+  {
+    "email": "diya.bhatia@example.com",
+    "fname": "Diya",
+    "lname": "Bhatia",
+    "department": "Legal",
+    "rollNumber": 107,
+    "subject": "Cloud Computing",
+    "classesAttended": 14,
+    "attendance": 80.7
+  },
+  {
+    "email": "myra.agarwal@example.com",
+    "fname": "Myra",
+    "lname": "Agarwal",
+    "department": "IT",
+    "rollNumber": 108,
+    "subject": "AI & ML",
+    "classesAttended": 16,
+    "attendance": 80.8
+  },
+  {
+    "email": "kiara.reddy@example.com",
+    "fname": "Kiara",
+    "lname": "Reddy",
+    "department": "Research",
+    "rollNumber": 109,
+    "subject": "Data Science",
+    "classesAttended": 18,
+    "attendance": 80.9
+  },
+  {
+    "email": "aarav.sharma@example.com",
+    "fname": "Aarav",
+    "lname": "Sharma",
+    "department": "Engineering",
+    "rollNumber": 110,
+    "subject": "Java",
+    "classesAttended": 20,
+    "attendance": 81
+  },
+  {
+    "email": "aditya.gupta@example.com",
+    "fname": "Aditya",
+    "lname": "Gupta",
+    "department": "Human Resources",
+    "rollNumber": 112,
+    "subject": "Cloud Computing",
+    "classesAttended": 24,
+    "attendance": 81.2
+  },
+  {
+    "email": "ishaan.mehta@example.com",
+    "fname": "Ishaan",
+    "lname": "Mehta",
+    "department": "Finance",
+    "rollNumber": 113,
+    "subject": "AI & ML",
+    "classesAttended": 26,
+    "attendance": 81.3
+  },
+  {
+    "email": "anaya.thakur@example.com",
+    "fname": "Anaya",
+    "lname": "Thakur",
+    "department": "Sales",
+    "rollNumber": 115,
+    "subject": "Java",
+    "classesAttended": 30,
+    "attendance": 81.5
+  },
+  {
+    "email": "aadhya.vishwakarma@example.com",
+    "fname": "Aadhya",
+    "lname": "Vishwakarma",
+    "department": "Support",
+    "rollNumber": 116,
+    "subject": "Python",
+    "classesAttended": 32,
+    "attendance": 81.6
+  },
+  {
+    "email": "diya.mistri@example.com",
+    "fname": "Diya",
+    "lname": "mistri",
+    "department": "Legal",
+    "rollNumber": 117,
+    "subject": "Cloud Computing",
+    "classesAttended": 34,
+    "attendance": 81.7
+  },
+  {
+    "email": "shimpi.agarwal@example.com",
+    "fname": "Shimpi",
+    "lname": "Agarwal",
+    "department": "IT",
+    "rollNumber": 118,
+    "subject": "AI & ML",
+    "classesAttended": 36,
+    "attendance": 81.8
+  },
+  {
+    "email": "suchita.shukla@example.com",
+    "fname": "Suchita",
+    "lname": "Shukla",
+    "department": "Research",
+    "rollNumber": 119,
+    "subject": "Data Science",
+    "classesAttended": 38,
+    "attendance": 81.9
+  },
+  {
+    "email": "prince.raj@example.com",
+    "fname": "Prince",
+    "lname": "Raj",
+    "department": "Engineering",
+    "rollNumber": 120,
+    "subject": "Python",
+    "classesAttended": 40,
+    "attendance": 80
+  },
+  {
+    "email": "golu.raj@example.com",
+    "fname": "Golu",
+    "lname": "Raj",
+    "department": "Engineering",
+    "rollNumber": 121,
+    "subject": "Java",
+    "classesAttended": 40,
+    "attendance": 80
+  },
+  {
+    "email": "Mahi.Singh@example.com",
+    "fname": "Mahi",
+    "lname": "Singh",
+    "department": "Engineering",
+    "rollNumber": 122,
+    "subject": "Cloud Computing",
+    "classesAttended": 30,
+    "attendance": 80
+  },
+  {
+    "email": "ankita.singh@example.com",
+    "fname": "Ankita",
+    "lname": "Singh",
+    "department": "IT",
+    "rollNumber": 123,
+    "subject": "cobol",
+    "classesAttended": 40,
+    "attendance": 60
+  },
+  {
+    "email": "ranu.singh@example.com",
+    "fname": "Ranu",
+    "lname": "Singh",
+    "department": "IT",
+    "rollNumber": 124,
+    "subject": "java",
+    "classesAttended": 40,
+    "attendance": 60
+  },
+  {
+    "email": "shailendra.sharma@example.in",
+    "fname": "Shailendra",
+    "lname": "Sharma",
+    "department": "IT",
+    "rollNumber": 125,
+    "subject": "java",
+    "classesAttended": 40,
+    "attendance": 60
+  }
+]

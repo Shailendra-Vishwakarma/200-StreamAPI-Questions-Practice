@@ -43,6 +43,10 @@ public class EmployeeController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/all-unique-fname")
+    public ResponseEntity<List<String>> getAllUniqueFname(){
+        return ResponseEntity.ok(employeeService.getAllUniqueFirstName());
+    }
 
 }
 

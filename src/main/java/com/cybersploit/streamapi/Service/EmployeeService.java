@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+
 @Service
 public class EmployeeService {
 
@@ -47,7 +48,12 @@ public class EmployeeService {
         employeeRepository.deleteById(id);
     }
     //Q1: Retrieve a list of all unique first names of employees.
-
+    public List<String> getAllUniqueFirstName(){
+       return employeeRepository.findAll().stream()
+                .map(Employee::getFname)
+                .distinct()
+                .collect(Collectors.toList());
+    }
 
 }
 

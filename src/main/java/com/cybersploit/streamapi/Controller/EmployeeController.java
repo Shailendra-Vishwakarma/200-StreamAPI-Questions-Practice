@@ -47,6 +47,12 @@ public class EmployeeController {
     public ResponseEntity<List<String>> getAllUniqueFname(){
         return ResponseEntity.ok(employeeService.getAllUniqueFirstName());
     }
+    @GetMapping("/total-count")
+    public ResponseEntity<Long> getEmployeeCount(){
+        return ResponseEntity.ok(employeeService.getEmployeeCount());
+    }
+
+
 
 }
 

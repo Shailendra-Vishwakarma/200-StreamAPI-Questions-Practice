@@ -54,6 +54,11 @@ public class EmployeeService {
                 .distinct()
                 .collect(Collectors.toList());
     }
+   //Q2: Count the total number of employees in the database.
+    public Long getEmployeeCount(){
+        return employeeRepository.findAll().stream().count();
+    }
+
 
 }
 

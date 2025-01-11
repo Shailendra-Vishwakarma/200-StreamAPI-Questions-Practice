@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -47,18 +48,44 @@ public class EmployeeService {
     public void deleteEmployee(Integer id) {
         employeeRepository.deleteById(id);
     }
-    //Q1: Retrieve a list of all unique first names of employees.
+    //API 1: Retrieve a list of all unique first names of employees.
     public List<String> getAllUniqueFirstName(){
        return employeeRepository.findAll().stream()
                 .map(Employee::getFname)
                 .distinct()
                 .collect(Collectors.toList());
     }
-   //Q2: Count the total number of employees in the database.
+   //API 2: Count the total number of employees in the database.
     public Long getEmployeeCount(){
         return employeeRepository.findAll().stream().count();
     }
+    //API 3: Filter employees with the first name starting with the letter "S"
+    public List<Employee> getEmployeeWithFistNameStartingWithS(){
+        String prefix="s";
+        return employeeRepository.findAll()
+                .stream()
+                .filter(employee -> employee.getFname().toLowerCase().startsWith(prefix.toLowerCase()))
+                 .toList();
+    }
 
+    //API 4: Get a list of employees who have attended more than 75% of classes
+    public List<Employee> getEmployeeWithHighAttendance(){
+        return employeeRepository.findAll().stream()
+                .filter(employee -> employee.getAttendance()>75)
+                .toList();
+    }
+
+    // API 5: Create a list of employees who are in the “IT” department
+    public List<Employee> getEmployeeInITDepartment(){
+      return  employeeRepository.findAll().stream()
+                .filter(employee -> employee.getDepartment().equalsIgnoreCase("it"))
+                .toList();
+    }
+   // API 6: Count how many employees belong to each department
+    public Map<String,Long> getEmployeeCountByDept(){
+        return employeeRepository.findAll().stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
+    }
 
 }
 

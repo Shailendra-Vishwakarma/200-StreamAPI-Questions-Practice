@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/employees")
@@ -52,7 +53,25 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeService.getEmployeeCount());
     }
 
+    @GetMapping("/first-name-start-with-S")
+    public ResponseEntity<List<Employee>> getEmployeeWithFistNameStartingWithS(){
+        return ResponseEntity.ok(employeeService.getEmployeeWithFistNameStartingWithS());
+    }
 
+    @GetMapping("/high-attendance")
+    public ResponseEntity<List<Employee>> getEmployeeWithHighAttendance(){
+        return ResponseEntity.ok(employeeService.getEmployeeWithHighAttendance());
+    }
+
+    @GetMapping("/it-department-emp")
+    public ResponseEntity<List<Employee>> getEmployeeInITDepartment(){
+        return ResponseEntity.ok(employeeService.getEmployeeInITDepartment());
+    }
+
+    @GetMapping("/count-by-department")
+    public ResponseEntity<Map<String,Long>> getEmployeeCountByDept(){
+        return ResponseEntity.ok(employeeService.getEmployeeCountByDept());
+    }
 
 }
 

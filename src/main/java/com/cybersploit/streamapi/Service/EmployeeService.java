@@ -86,6 +86,14 @@ public class EmployeeService {
         return employeeRepository.findAll().stream()
                 .collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
     }
+    // API 7: Retrieve the last names of employees with a specific email domain
+    public List<String> getLastNameByEmailDomain(){
+        return employeeRepository.findAll().stream()
+                .filter(employee -> employee.getEmail().endsWith(".in"))
+                .map(Employee::getLname)
+                .toList();
+    }
+
 
 }
 

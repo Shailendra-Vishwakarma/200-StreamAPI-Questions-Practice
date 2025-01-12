@@ -73,5 +73,10 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeService.getEmployeeCountByDept());
     }
 
+    @GetMapping("/last-name-by-email-domain")
+    public ResponseEntity<List<String>> getLastNameByEmailDomain(){
+        return ResponseEntity.ok(employeeService.getLastNameByEmailDomain());
+    }
+
 }
 

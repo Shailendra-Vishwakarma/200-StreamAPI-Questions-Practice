@@ -5,6 +5,7 @@ import com.cybersploit.streamapi.Repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -93,6 +94,12 @@ public class EmployeeService {
                 .map(Employee::getLname)
                 .toList();
     }
+    // API 8 : Find the employee with the highest attendance
+    public Optional<Employee> getEmployeeByHighestAttendance(){
+       return employeeRepository.findAll().stream()
+                .max(Comparator.comparing(Employee::getAttendance));
+    }
+
 
 
 }

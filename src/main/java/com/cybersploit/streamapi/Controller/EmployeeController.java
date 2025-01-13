@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/employees")
@@ -77,6 +78,11 @@ public class EmployeeController {
     public ResponseEntity<List<String>> getLastNameByEmailDomain(){
         return ResponseEntity.ok(employeeService.getLastNameByEmailDomain());
     }
+    @GetMapping("/highest-attendance")
+    public ResponseEntity<Optional<Employee>> getEmployeeByHighestAttendance(){
+        return ResponseEntity.ok(employeeService.getEmployeeByHighestAttendance());
+    }
+
 
 }
 

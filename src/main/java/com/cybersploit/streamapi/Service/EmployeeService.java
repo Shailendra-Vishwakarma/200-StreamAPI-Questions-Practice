@@ -100,7 +100,17 @@ public class EmployeeService {
                 .max(Comparator.comparing(Employee::getAttendance));
     }
 
-
+    // API 9 : Get the average attendance percentage of employees in each department
+    public Map<String,Double> getAverageAttendanceByDepartment(){
+        return employeeRepository.findAll().stream()
+                .collect(Collectors.groupingBy(e->e.getDepartment(),Collectors.averagingDouble(e->e.getAttendance())));
+    }
+    // API 10 : Sort employees by last name in ascending order.
+    public List<Employee> getEmployeeSortedByLastName(){
+        return employeeRepository.findAll().stream()
+                .sorted(Comparator.comparing(employee -> employee.getLname().toUpperCase()))
+                .toList();
+    }
 
 }
 

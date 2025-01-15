@@ -2,6 +2,7 @@ package com.cybersploit.streamapi.Controller;
 
 import com.cybersploit.streamapi.Entity.Employee;
 import com.cybersploit.streamapi.Service.EmployeeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-
+@Tag(name = "Employee API", description = "Employee APIs Created using Stream API - Java 8 New Feature.")
 @RestController
 @RequestMapping("/api/employees")
 public class EmployeeController {
@@ -78,11 +79,21 @@ public class EmployeeController {
     public ResponseEntity<List<String>> getLastNameByEmailDomain(){
         return ResponseEntity.ok(employeeService.getLastNameByEmailDomain());
     }
+
     @GetMapping("/highest-attendance")
     public ResponseEntity<Optional<Employee>> getEmployeeByHighestAttendance(){
         return ResponseEntity.ok(employeeService.getEmployeeByHighestAttendance());
     }
 
+    @GetMapping("/average-attendance-by-department")
+    public ResponseEntity<Map<String,Double>> getAverageAttendanceByDepartment(){
+        return ResponseEntity.ok(employeeService.getAverageAttendanceByDepartment());
+    }
+
+    @GetMapping("/sort-by-last-name")
+    public ResponseEntity<List<Employee>> getEmployeeSortedByLastName(){
+        return ResponseEntity.ok(employeeService.getEmployeeSortedByLastName());
+    }
 
 }
 

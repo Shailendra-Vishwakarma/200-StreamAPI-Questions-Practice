@@ -7,3 +7,6 @@
 - API 6 ~ Count how many employees belong to each department.
 - API 7 ~ Retrieve the last names of employees with a specific email domain.
 - API 8 ~ Find the employee with the highest attendance.
+- API 9 ~ Get the average attendance percentage of employees in each department.
+- API 10 ~ Sort employees by last name in ascending order.
+- API 11 ~ Group employees by their subjects and count the number of employees per subject.

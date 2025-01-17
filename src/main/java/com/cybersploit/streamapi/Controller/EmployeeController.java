@@ -94,6 +94,10 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> getEmployeeSortedByLastName(){
         return ResponseEntity.ok(employeeService.getEmployeeSortedByLastName());
     }
+    @GetMapping("/count-emp-by-each-subject")
+    public ResponseEntity<Map<String,Long>> getEmployeeCountBySubject(){
+        return ResponseEntity.ok(employeeService.getEmployeeCountBySubject());
+    }
 
 }
 

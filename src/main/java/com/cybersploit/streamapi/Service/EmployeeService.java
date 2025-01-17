@@ -111,6 +111,12 @@ public class EmployeeService {
                 .sorted(Comparator.comparing(employee -> employee.getLname().toUpperCase()))
                 .toList();
     }
+    // API 11: Group employees by their subjects and count the number of employees per subject
+    public Map<String,Long> getEmployeeCountBySubject(){
+        return employeeRepository.findAll().stream()
+                .collect(Collectors.groupingBy(employee -> employee.getSubject().toUpperCase(),Collectors.counting()));
+    }
+
 
 }
 

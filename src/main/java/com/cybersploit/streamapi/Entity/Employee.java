@@ -1,14 +1,9 @@
 package com.cybersploit.streamapi.Entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
@@ -35,6 +30,21 @@ public class Employee {
 
     @Column(nullable = false)
     private Double attendance ;
+
+    public Employee() {
+    }
+
+    public Employee(Integer id, String email, String fname, String lname, String department, Integer rollNumber, String subject, Integer classesAttended, Double attendance) {
+        this.id = id;
+        this.email = email;
+        this.fname = fname;
+        this.lname = lname;
+        this.department = department;
+        this.rollNumber = rollNumber;
+        this.subject = subject;
+        this.classesAttended = classesAttended;
+        this.attendance = attendance;
+    }
 
     public Integer getId() {
         return id;

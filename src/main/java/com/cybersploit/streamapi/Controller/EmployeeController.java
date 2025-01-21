@@ -98,6 +98,15 @@ public class EmployeeController {
     public ResponseEntity<Map<String,Long>> getEmployeeCountBySubject(){
         return ResponseEntity.ok(employeeService.getEmployeeCountBySubject());
     }
+    @GetMapping("/roll-greaterThan-120")
+    public ResponseEntity<List<Employee>> getEmployeeWithRollGreaterThan120(){
+        return ResponseEntity.ok(employeeService.getEmployeeWithRollGreaterThan120());
+    }
+
+    @GetMapping("Emp-from-java-and-python")
+    public ResponseEntity<List<Employee>> getEmployeesFromJavaAndPython(){
+        return ResponseEntity.ok(employeeService.getEmployeesFromJavaAndPython());
+    }
 
 }
 

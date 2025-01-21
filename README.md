@@ -10,3 +10,5 @@
 - API 9 ~ Get the average attendance percentage of employees in each department.
 - API 10 ~ Sort employees by last name in ascending order.
 - API 11 ~ Group employees by their subjects and count the number of employees per subject.
+- API 12 ~ Find all employees whose roll number is greater than 120
+- API 13 ~ API 13: Get employees who are in  "Java" or "Python".

@@ -116,7 +116,19 @@ public class EmployeeService {
         return employeeRepository.findAll().stream()
                 .collect(Collectors.groupingBy(employee -> employee.getSubject().toUpperCase(),Collectors.counting()));
     }
+    // API 12: Find all employees whose roll number is greater than 120
+    public List<Employee> getEmployeeWithRollGreaterThan120(){
+        return employeeRepository.findAll().stream()
+                .filter(employee -> employee.getRollNumber()>120)
+                .toList();
+    }
 
+    // API 13: Get employees who are in  "Java" or "Python".
+    public List<Employee> getEmployeesFromJavaAndPython(){
+      return  employeeRepository.findAll().stream()
+                .filter(e->e.getSubject().equalsIgnoreCase("java")|| e.getSubject().equalsIgnoreCase("Python"))
+                .toList();
+    }
 
 }
 

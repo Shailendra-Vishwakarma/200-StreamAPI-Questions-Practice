@@ -108,5 +108,10 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeService.getEmployeesFromJavaAndPython());
     }
 
+    @GetMapping("/count-emp-by-even-roll")
+    public ResponseEntity<Long> getEmployeeCountByEvenRollNumber(){
+        return ResponseEntity.ok(employeeService.getEmployeeCountByEvenRollNumber());
+    }
+
 }
 

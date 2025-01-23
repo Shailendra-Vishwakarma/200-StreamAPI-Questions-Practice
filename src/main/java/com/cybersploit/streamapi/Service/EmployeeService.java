@@ -129,6 +129,14 @@ public class EmployeeService {
                 .filter(e->e.getSubject().equalsIgnoreCase("java")|| e.getSubject().equalsIgnoreCase("Python"))
                 .toList();
     }
+    // API 14: Count how many employees have an even roll number
+    public Long getEmployeeCountByEvenRollNumber(){
+       return employeeRepository.findAll().stream()
+                .filter(e->e.getRollNumber()%2==0)
+                .count();
+
+
+    }
 
 }
 
